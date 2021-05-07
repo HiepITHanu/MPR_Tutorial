@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="16dp">
+
+            <ImageButton
+                android:id="@+id/startIb"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/star_circle"
+                android:layout_marginBottom="30dp"
+                android:background="#808080"/>
+
+            <ImageButton
+                android:id="@+id/ballIb"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ball_circle"
+                android:background="#808080"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_marginTop="40dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/star"
+            android:layout_gravity="center"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            >
+
+            <Button
+                android:id="@+id/spinBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SPIN"
+                android:backgroundTint="#808080"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="16dp"/>
+
+            <Button
+                android:id="@+id/turnAroundBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TURN AROUND"
+                android:backgroundTint="#808080"
+                app:layout_constraintRight_toLeftOf="@+id/spinBtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="16dp"/>
+
+            <Button
+                android:id="@+id/jumpBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#808080"
+                android:text="JUMP"
+                android:layout_marginRight="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/turnAroundBtn"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
